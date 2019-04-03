@@ -10,7 +10,6 @@ def parsechunk(chunk, outfile):
         byte = struct.unpack("b",f.read(1))[0]
         f1.write(struct.pack("b", byte))
     f1.close()
-    return outfile
         
         
 parser = argparse.ArgumentParser()
