@@ -6,9 +6,8 @@ import argparse
 def parsechunk(chunk, outfile):
     print "Dumping " + outfile + "...\n"
     f1 = open(outfile, "wb")
-    for i in range(0,chunk):
-        byte = struct.unpack("b",f.read(1))[0]
-        f1.write(struct.pack("b", byte))
+    filebytes = f.read(chunk)
+    f1.write(filebytes)
     f1.close()
         
         
